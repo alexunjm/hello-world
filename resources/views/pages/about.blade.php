@@ -1,53 +1,32 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layout')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('content')
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+<div class="container">
+    <div class="content">
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato', sans-serif;
-            }
+    @if(empty($people))
+        There are no people
+    @else
+        @foreach ($people as $person)
+            <li>{{ $person }}</li>
+        @endforeach
+    @endif
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+    </div>
+</div>
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
+@stop
 
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
- 
-            @if(empty($people))
-                There are no people
-            @else
-                @foreach ($people as $person)
-                    <li>{{ $person }}</li>
-                @endforeach
-            @endif
 
-            </div>
-        </div>
-    </body>
-</html>
+@section('footer')
+
+<div class="footer">
+    <div class="content">
+
+    the footer
+
+    </div>
+</div>
+
+@stop
