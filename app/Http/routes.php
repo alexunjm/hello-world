@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    //return view('welcome');
-    return 'hi there';
-});
+Route::get('/', 'PagesController@home');
 
 Route::get('about', function() {
 	//$people = [];
