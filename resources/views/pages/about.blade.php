@@ -38,13 +38,7 @@
     <body>
         <div class="container">
             <div class="content">
-
-            <?php foreach ($people as $person): ?>
-                <li><?= $person; ?></li>
-            <?php endforeach; ?>
-            
-                <div class="title">About page</div>
-                
+ 
             @if(empty($people))
                 There are no people
             @else
@@ -52,12 +46,6 @@
                     <li>{{ $person }}</li>
                 @endforeach
             @endif
-
-            @unless(empty($people))
-                @foreach ($people as $person)
-                    <li>{{ $person }}</li>
-                @endforeach
-            @endunless
 
             </div>
         </div>
