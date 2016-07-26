@@ -35,7 +35,10 @@
                 font-size: 96px;
             }
         </style>
-        
+
+        <!-- <link rel="stylesheet" type="text/css" href="/css/style.css"> -->
+        <link rel="stylesheet" type="text/css" href="{{ elixir('css/app.css') }}">
+
         @yield('header')
     </head>
     <body>
@@ -44,5 +47,6 @@
 
 
         @yield('footer')
+
     </body>
 </html>
